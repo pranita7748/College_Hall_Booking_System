@@ -4,7 +4,7 @@ A centralized, role-based MERN stack web application for managing college hall r
 
 ---
 
-## 🏛️ System Features
+## System Features
 
 1. **Role-Based Access Control (RBAC)**:
    - **`CLUB_COORDINATOR`** (`Phoenix`, `DEsoc`, `Debuggers`, `CSI`): Check availability, submit booking requests, track status (`Pending`, `Approved`, `Rejected`, `Cancelled`), edit or cancel requests.
@@ -45,7 +45,7 @@ npm run dev     # Starts Vite on http://localhost:5173
 
 ---
 
-## 🔑 Pre-Configured Demo Credentials
+## Pre-Configured Demo Credentials
 
 The portal features a unified **Events Login** for all departmental clubs, alongside HOD Approver and Administrator logins:
 
@@ -57,7 +57,7 @@ The portal features a unified **Events Login** for all departmental clubs, along
 
 ---
 
-## 📡 REST API Summary
+## REST API Summary
 
 - `POST /api/auth/login` - User authentication
 - `GET /api/auth/me` - Current session profile
