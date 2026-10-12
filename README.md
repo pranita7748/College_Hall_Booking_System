@@ -51,7 +51,7 @@ The portal features a unified **Events Login** for all departmental clubs, along
 
 | Role | Email | Password | Scope & Responsibilities |
 | :--- | :--- | :--- | :--- |
-| **Events Login** | `events@college.edu` | `Events@123` | Single unified portal for all clubs (`Phoenix`, `DEsoc`, `Debuggers`, `CSI`). Access to full Event Booking Form & Records. |
+| **Events Login** | `events@college.edu` | `Events@123` | Single unified portal for all college clubs. Access to full Event Booking Form & Records. |
 | **HOD Approver** | `hod@college.edu` | `Hod@123` | Head of Department approval queue, conflict inspector & rejection reasons. |
 | **Administrator** | `admin@college.edu` | `Admin@123` | User/Club/Hall facility configuration & immutable audit trail. |
 
