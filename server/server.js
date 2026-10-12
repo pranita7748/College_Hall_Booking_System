@@ -43,9 +43,14 @@ const connectDB = async () => {
   if (isConnected && mongoose.connection.readyState === 1) {
     return;
   }
-  const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/jvn_hall_booking';
+  const rawUri = process.env.MONGODB_URI;
+  if (!rawUri) {
+    throw new Error('MONGODB_URI environment variable is missing in Vercel project settings.');
+  }
   try {
-    const db = await mongoose.connect(MONGODB_URI);
+    const db = await mongoose.connect(rawUri, {
+      serverSelectionTimeoutMS: 8000
+    });
     isConnected = db.connections[0].readyState === 1;
     console.log('✓ Successfully connected to MongoDB.');
   } catch (err) {
@@ -63,7 +68,7 @@ app.use(async (req, res, next) => {
     } catch (err) {
       return res.status(500).json({
         success: false,
-        message: 'Database connection failed. Please check MONGODB_URI configuration.'
+        message: `Database connection failed: ${err.message}`
       });
     }
   }
